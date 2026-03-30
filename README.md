@@ -1,96 +1,114 @@
-# GrainPalette - Rice Type Classification Project
+# Rice Type Classification System
 
-GrainPalette is a deep learning and Flask-based rice type classification project.  
-The user uploads a rice grain image, and the trained model predicts the rice type.
+This project is a Deep Learning-based web application that classifies rice grain images into five categories using MobileNet and Flask.
+<img width="1907" height="732" alt="Screenshot 2026-03-31 003407" src="https://github.com/user-attachments/assets/402c77ef-7bca-47ad-91dd-549158f22a77" />
+<img width="1603" height="896" alt="Screenshot 2026-03-31 010535" src="https://github.com/user-attachments/assets/7dc04d0f-7c66-45f8-bf3b-8ce2bc8eab3b" />
+
+## Project Overview
+
+The objective of this project is to identify the type of rice from an uploaded image.  
+The system predicts one of the following classes:
+
+- Arborio
+- Basmati
+- Ipsala
+- Jasmine
+- Karacadag
+
+The model was trained using TensorFlow/Keras and integrated into a Flask web application for real-time prediction.
+
+## Technologies Used
+
+- Python
+- TensorFlow / Keras
+- MobileNet
+- Flask
+- HTML / CSS
+- NumPy
+- Werkzeug
+
+## Model Details
+
+- Model Architecture: MobileNet
+- Input Image Size: 160 x 160
+- Number of Classes: 5
+- Validation Accuracy: ~98%
 
 ## Project Structure
 
 ```text
 GrainPalette/
+│
 ├── app.py
 ├── predict.py
-├── requirements.txt
 ├── README.md
-├── data/
-│   ├── train/
-│   └── validation/
+├── requirements.txt
+│
 ├── training/
-│   ├── train.py
-│   └── train.ipynb
+│   └── rice.h5
+│
 ├── templates/
 │   ├── index.html
 │   ├── details.html
 │   └── results.html
-└── static/
-    ├── css/
-    │   └── style.css
-    └── uploads/
-```
+│
+├── static/
+│   ├── css/
+│   └── uploads/
+│
+└── data/
 
-## Recommended Environment
 
-Use **Python 3.7** because `tensorflow==2.3.2` works best with older Python versions.
 
-## Installation
+How to Run the Project:
 
-```bash
-conda create -n grainpalette python=3.7
-conda activate grainpalette
-pip install -r requirements.txt
-python -m ipykernel install --user --name grainpalette --display-name "Python (grainpalette)"
-```
+**Clone the repository:**
+git clone https://github.com/CJ-888/rice-type-classification.git
 
-## Dataset Structure
+**Go into the project folder:**
+cd rice-type-classification/GrainPalette
 
-Put your rice images in this format:
+**Install dependencies:**
+py -m pip install -r requirements.txt
 
-```text
-data/
-├── train/
-│   ├── arborio/
-│   ├── basmati/
-│   ├── ipsala/
-│   ├── jasmine/
-│   └── karacadag/
-└── validation/
-    ├── arborio/
-    ├── basmati/
-    ├── ipsala/
-    ├── jasmine/
-    └── karacadag/
-```
+**Run the Flask app:**
+py app.py
 
-Change the folder names if your classes are different.
-
-## Train the Model
-
-From the project root:
-
-```bash
-python training/train.py
-```
-
-This will create:
-- `training/rice.h5`
-- `training/class_indices.json`
-- `training/accuracy_plot.png`
-- `training/loss_plot.png`
-
-## Run the Flask App
-
-```bash
-python app.py
-```
-
-Then open:
-
-```text
+**Open the browser and go to:**
 http://127.0.0.1:5000/
-```
 
-## Important Note
 
-Your original topic mentions **MobileNetV4**, but the given prerequisites use **TensorFlow 2.3.2 / Keras 2.3.1**.  
-That stack does **not** provide MobileNetV4, so this project uses **MobileNet** for compatibility.
 
-If your lecturer specifically requires MobileNetV4, you would need a newer TensorFlow setup.
+**How It Works**
+The user uploads a rice grain image through the Flask web interface.
+The image is preprocessed and resized to 160 x 160.
+The trained model predicts the rice type.
+The prediction result is displayed on the results page.
+
+
+**Features**
+-Upload rice grain image
+-Predict rice category
+-Display confidence score
+-<img width="1603" height="896" alt="Screenshot 2026-03-31 010535" src="https://github.com/user-attachments/assets/e7ba8127-44de-40b9-9429-ca7436a61b1e" />
+<img width="1907" height="732" alt="Screenshot 2026-03-31 003407" src="https://github.com/user-attachments/assets/0de0ea4e-63ce-46c8-a5b9-3cb5cbc820e7" />
+Web-based user interface
+
+**Demo**
+The project can be demonstrated by:
+
+-running the Flask application
+-opening the local server in the browser
+-uploading a rice image
+-viewing the predicted rice type
+
+**Future Improvements**
+-Deploy the application online
+-Add support for more grain varieties
+-Improve UI design
+-Add top-3 prediction visualization
+-Add mobile support
+
+
+**Author**
+Chaitanya D Jahajeeah
