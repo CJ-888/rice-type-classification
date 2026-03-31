@@ -2,7 +2,9 @@
 
 This project is a Deep Learning-based web application that classifies rice grain images into five categories using MobileNet and Flask.
 <img width="1907" height="732" alt="Screenshot 2026-03-31 003407" src="https://github.com/user-attachments/assets/402c77ef-7bca-47ad-91dd-549158f22a77" />
-<img width="1603" height="896" alt="Screenshot 2026-03-31 010535" src="https://github.com/user-attachments/assets/7dc04d0f-7c66-45f8-bf3b-8ce2bc8eab3b" />
+<img width="1603" height="896" alt="Screenshot 2026-03-31 010535" src="https://github.com/user-attachments/assets/7dc04d0f-7c66-45f8-bf3b-8ce2bc8eab3b" 
+  <img width="1202" height="912" alt="image" src="https://github.com/user-attachments/assets/e793ad7b-1e8d-4495-8da7-a807aa97f541" />
+
 
 ## Project Overview
 
@@ -90,9 +92,7 @@ The prediction result is displayed on the results page.
 -Upload rice grain image
 -Predict rice category
 -Display confidence score
--<img width="1603" height="896" alt="Screenshot 2026-03-31 010535" src="https://github.com/user-attachments/assets/e7ba8127-44de-40b9-9429-ca7436a61b1e" />
-<img width="1907" height="732" alt="Screenshot 2026-03-31 003407" src="https://github.com/user-attachments/assets/0de0ea4e-63ce-46c8-a5b9-3cb5cbc820e7" />
-Web-based user interface
+-Web-based user interface
 
 **Demo**
 The project can be demonstrated by:
